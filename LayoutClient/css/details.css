@@ -22,18 +22,19 @@ header {
     max-height: 70px;
     width: 100%;
     justify-content: space-between;
-    /* font-weight: bold; */
-    /* position: fixed; */
     background: #fff;
     transition: top 0.3s ease, opacity 0.3s ease; /* Thêm chuyển động mượt */
     opacity: 1;
+    position: relative; /* Đảm bảo header không chồng lên các phần tử */
+    z-index: 2; /* Giá trị thấp hơn dropdown nhưng cao hơn banner */
 }
 header img{
-    width: 10%;
+    max-height: 50px;
     margin-left: 30px;
     display: flex;
     justify-content: space-between;
-    
+    width: 10%;
+    object-fit: cover;
 }
 
 .icon1 {
@@ -43,6 +44,65 @@ header img{
     justify-content: center;
     min-height: 100vh;
     box-sizing: border-box;
+}
+/* login */
+/* Dropdown Container */
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-icon {
+    cursor: pointer;
+}
+
+/* Menu Dropdown */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 50px; /* Vị trí so với icon */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    padding: 10px 0;
+    min-width: 100px; /* Đảm bảo chiều rộng */
+    animation: fadeIn 0.3s ease;
+}
+
+/* Hiệu ứng hover cho menu */
+.dropdown-item {
+    display: block;
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
+}
+
+.dropdown-item:hover {
+    background-color: orange; /* Nền cam khi hover */
+    color: #fff; /* Màu chữ trắng khi hover */
+    border-radius: 5px;
+}
+
+/* Hiệu ứng xuất hiện */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hiển thị menu khi click */
+.dropdown-container:hover .dropdown-menu {
+    display: block; /* Hiển thị menu khi hover vào container */
 }
 
 #search-box {
@@ -414,6 +474,92 @@ h2{
     display: inline-block;
     margin-left: 100px;
 }
+/* comment */
+.comment-section {
+    margin: 20px 120px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comment-section h3 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Comment Box */
+.comment-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+}
+
+.comment-box textarea {
+    flex: 1;
+    resize: none;
+    height: 50px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 14px;
+    outline: none;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.comment-box textarea:focus {
+    border-color: #007bff;
+}
+
+.comment-box button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.comment-box button:hover {
+    background-color: #0056b3;
+}
+
+/* Quote Box */
+.quote-box {
+    margin: 20px 120px;
+    padding: 15px;
+    background-color: #fff;
+    border-left: 4px solid #007bff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.quote-box blockquote {
+    margin: 0;
+    font-size: 16px;
+    font-style: italic;
+    color: #555;
+}
+
+.quote-box cite {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #888;
+    text-align: right;
+}
+
 /* footer */
 footer {
     background-color: #333;

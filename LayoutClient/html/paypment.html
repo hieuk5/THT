@@ -32,7 +32,14 @@
                     </button>
                 </div>
             </form>
-            <a href="login.html"><span class="material-symbols-outlined">person</span></a>
+            <div class="dropdown-container">
+                <span class="material-symbols-outlined dropdown-icon">person</span>
+                <div class="dropdown-menu">
+                    <a href="login.html" class="dropdown-item">Đăng nhập</a>
+                    <a href="#" class="dropdown-item">Thông tin tài khoản</a>
+                    <a href="#" class="dropdown-item">Đăng xuất</a>
+                </div>
+            </div>
             <a href=""><span class="material-symbols-outlined">favorite</span></a>
             <a href=""><span class="material-symbols-outlined">shopping_cart</span></a>
         </div>
@@ -93,9 +100,9 @@
                         </div>
                     </div>
                     <hr>
-                    <div >
+                    <div class="voucher">
                         <input type="text" placeholder="Nhập mã giảm giá">
-                        <button class="voucher">Áp dụng</button>
+                        <button>Áp dụng</button>
                     </div>
                     <hr>
                 </div>
@@ -149,6 +156,7 @@
         <hr align="center" /><br>
         <p3>Bản quyền © 2024 THT Shop.</p3>
     </footer>
+    <script src="../js/payment.js"></script>
 </body>
 
 </html>

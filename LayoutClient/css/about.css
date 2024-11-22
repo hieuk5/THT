@@ -4,8 +4,31 @@
     box-sizing: border-box;
     font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+@media (max-width: 768px) {
+    .banner img {
+        width: 100%;
+        height: 200px; /* Chiều cao ảnh nhỏ hơn */
+    }
+}
 
+@media (max-width: 480px) {
+    .banner img {
+        width: 100%;
+        height: 150px; /* Chiều cao ảnh nhỏ hơn nữa */
+    }
+}
+body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
 
+.container {
+    max-width: 1280px;
+    margin: auto;
+    background-color: #fff;
+    
+}
 header {
     display: flex;
     align-items: center;
@@ -26,6 +49,7 @@ header img{
     width: 10%;
     object-fit: cover;
 }
+
 .icon1 {
     margin-right: 55px;
     display: flex;
@@ -34,13 +58,11 @@ header img{
     min-height: 100vh;
     box-sizing: border-box;
 }
-
 /* login */
 /* Dropdown Container */
 .dropdown-container {
     position: relative;
     display: inline-block;
-    
 }
 
 .dropdown-icon {
@@ -96,7 +118,6 @@ header img{
     display: block; /* Hiển thị menu khi hover vào container */
 }
 
-
 #search-box {
     display: flex;
     align-items: center;
@@ -137,7 +158,6 @@ header img{
     padding-right: 40px; /* Thêm khoảng trống cho icon */
 }
 
-
 .material-symbols-outlined {
     font-size: 24px;
     margin-left: 15px;
@@ -145,11 +165,6 @@ header img{
     color: orange;
 }
 /* banner */
-.banner img{
-    width: 100%;
-    max-height: 500px;
-    object-fit: cover;
-}
 .banner {
     position: relative;
     overflow: hidden;
@@ -162,7 +177,7 @@ header img{
     position: relative;
     width: 100%;
     overflow: hidden;
-    height: 500px; /* Chiều cao slider */
+    height: 420px; /* Chiều cao slider */
 }
 
 .slides {
@@ -231,7 +246,7 @@ button.prev, button.next {
     cursor: pointer;
     padding: 10px 15px;
     z-index: 20;
-    font-size: 18px;
+    font-size: 30px;
     border-radius: 50%;
 }
 
@@ -244,18 +259,25 @@ button.next {
 }
 
 button.prev:hover, button.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: orange;
+    transition: all 1s;
+
 }
+
+
 /* menu */
 nav ul {
     display:flex;
     text-align: center;
     gap: 50px;
-    
     font-size: 22px;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     
 }
+h2{
+    margin: 15px 20px;
+}
+
 nav ul li{
     list-style: none;
 }
@@ -273,121 +295,38 @@ nav ul li a:hover{
 }
 
 
-.container {
+/* main */
+.btn2{
+    float: right;
+    margin: -40px 30px;
+    border: 1px solid orange;
+    color: orange;
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: #fff;
+}
+.btn2:hover{
+    background-color: orange;
+    color: #fff;
+    animation: 2ms;
+}
+.btn3 img{
+    width: 10px;
+}
+.product{
     display: flex;
-    max-width: 1200px;
-     margin: 0 auto;
-    padding: 20px;
-}
-
-.categories {
-    width: 20%;
-    /* position: fixed; */
-
-}
-
-.categories h3 {
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.categories ul {
-    list-style: none;
-}
-
-.categories ul li {
-    margin-bottom: 5px;
-}
-
-.categories ul li a {
-    color: #333;
-    text-decoration: none;
-}
-.categories ul li a:hover{
-    color: #FF6600;
-}
-.product-list {
-    width: 80%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.product {
-    background-color: #f9f9f9;
-    border: 1px solid orange ;
-    padding: 15px;
-    /* text-align: center; */
-    border-radius: 5px;
-}
-
-.product img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.product h4 {
-    font-size: 1.1em;
-    margin-top: 10px;
-}
-
-.product p {
-    color: #555;
-}
-
-.product .price {
-    font-weight: bold;
-    color: #FF6600;
-    margin-top: 5px;
-    margin-left: 0 55px;
-}
-
-.product button {
-    margin-top: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap:15px;
+    /* margin: 25px; */
     padding: 10px;
-    border: 1px solid #FF6600;
-    background-color: white;
-    color: #FF6600;
-    cursor: pointer;
-    border-radius: 5px;
-    width: 250px;
-
 }
-
-.product button:hover {
-    background-color: #FF6600;
-    color: white;
-}
-
-/* animation */
-.hidden {
-    opacity: 0;
-    transform: translateY(50px); /* Di chuyển xuống 50px */
-    transition: all 0.6s ease-in-out; /* Thời gian hiệu ứng */
-}
-
-.show {
-    opacity: 1;
-    transform: translateY(0); /* Trở về vị trí ban đầu */
-}
-
-.pagination button {
-    padding: 10px 20px;
-    margin: 5px;
-    border: 1px solid #FF6600;
-    background-color: white;
-    color: #FF6600;
-    /* cursor: pointer; */
-    border-radius: 5px;
-}
-
-.pagination button:hover {
-    background-color: #FF6600;
-    color: white;
-}
-
-/* footer */
+/* .product2 img{
+    width: 405px;
+    height: 296px;
+    
+} */
 .footer1{
     height: 186px;
     background-color: #fff7ed;
@@ -398,7 +337,10 @@ nav ul li a:hover{
     font-weight: bold;
     line-height: 10px;
 }
-
+p{
+    float: right;
+    margin-left: -80px;
+}
 .icon img{
     width: 50px;
     display: flex;
@@ -466,6 +408,11 @@ p3{
     text-align: center;
 }
 
+/* hr{
+    border-bottom: 1px solid #444;
+    margin: 20px 0;
+} */
+
 /* Copyright Section */
 .footer-bottom {
     text-align: center;
@@ -473,4 +420,84 @@ p3{
     padding: 20px 0;
     font-size: 12px;
     border-top: 1px solid #444;
+}
+
+.conten{
+    width: 1440px;
+    margin: auto;
+}
+
+.conten1{
+    width: 100%;
+    height: 400px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px 0 40px 40px;
+}
+
+.ndconten1{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    
+}
+.ndconten1 img{
+    padding: 0px 170px;
+    margin-bottom: 40px;
+    text-align: center;
+    height: 50%;
+}
+.ndconten1 p{
+    text-align: center;
+    margin: 0 40px 30px 30px;
+    padding: 0 20px;
+}
+
+.conten2{
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 0 40px;
+}
+.conten2 img{
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+}
+.conten2 p{
+    width: 100%;
+    padding: 0 30px;
+    font-size: 23px;
+}
+.conten2 h2{
+    width: 100%;
+    padding: 0 30px;
+    font-size: 30px;    
+
+}
+.conten3{
+    height: 100px;
+    /* padding: 20 25px 30px 30px; */
+
+}
+.conten3 h2{
+    height: 100px;
+    text-align: center;
+    padding-top: 20px;
+}
+.conten4{
+    width: 1440px;
+    display: flex;
+    margin-bottom: 25px;
+    margin-top: 10px;
+    background-color: white;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.ndconten4 img{
+    width: 360px;
+    height: 350px;
 }

@@ -38,6 +38,8 @@ header {
     background: #fff;
     transition: top 0.3s ease, opacity 0.3s ease; /* Thêm chuyển động mượt */
     opacity: 1;
+    position: relative; /* Đảm bảo header không chồng lên các phần tử */
+    z-index: 2; /* Giá trị thấp hơn dropdown nhưng cao hơn banner */
 }
 header img{
     max-height: 50px;
@@ -55,6 +57,65 @@ header img{
     justify-content: center;
     min-height: 100vh;
     box-sizing: border-box;
+}
+/* login */
+/* Dropdown Container */
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-icon {
+    cursor: pointer;
+}
+
+/* Menu Dropdown */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 50px; /* Vị trí so với icon */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    padding: 10px 0;
+    min-width: 100px; /* Đảm bảo chiều rộng */
+    animation: fadeIn 0.3s ease;
+}
+
+/* Hiệu ứng hover cho menu */
+.dropdown-item {
+    display: block;
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
+}
+
+.dropdown-item:hover {
+    background-color: orange; /* Nền cam khi hover */
+    color: #fff; /* Màu chữ trắng khi hover */
+    border-radius: 5px;
+}
+
+/* Hiệu ứng xuất hiện */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hiển thị menu khi click */
+.dropdown-container:hover .dropdown-menu {
+    display: block; /* Hiển thị menu khi hover vào container */
 }
 
 #search-box {
@@ -181,6 +242,40 @@ nav ul li a:hover{
     border-radius: 4px;
     margin-top: 20px;
 
+}
+.quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.quantity input[type="number"] {
+    width: 60px;
+    height: 35px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.quantity button {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.quantity button:hover {
+    background-color: #ddd;
 }
 
 .delete-btn {

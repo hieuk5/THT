@@ -32,7 +32,14 @@
                     </button>
                 </div>
             </form>
-            <a href="login.html"><span class="material-symbols-outlined">person</span></a>
+            <div class="dropdown-container">
+                <span class="material-symbols-outlined dropdown-icon">person</span>
+                <div class="dropdown-menu">
+                    <a href="login.html" class="dropdown-item">Đăng nhập</a>
+                    <a href="#" class="dropdown-item">Thông tin tài khoản</a>
+                    <a href="#" class="dropdown-item">Đăng xuất</a>
+                </div>
+            </div>
             <a href=""><span class="material-symbols-outlined">favorite</span></a>
             <a href=""><span class="material-symbols-outlined">shopping_cart</span></a>
         </div>
@@ -58,7 +65,9 @@
                             <span>iPhone 16 Promax VN/A</span>
                         </td>
                         <td>25.000.000đ</td>
-                        <td>1</td>
+                        <td><div class="quantity">
+                            <input type="number" value="1" min="1">
+                        </div></td>
                         <td>25.000.000đ</td>
                         <td>
                             <button class="delete-btn">🗑️</button>
@@ -72,7 +81,9 @@
                             <span>iPhone 16 VN/A</span>
                         </td>
                         <td>25.000.000đ</td>
-                        <td>1</td>
+                        <td><div class="quantity">
+                            <input type="number" value="1" min="1">
+                        </div></td>
                         <td>25.000.000đ</td>
                         <td>
                             <button class="delete-btn">🗑️</button>
@@ -86,7 +97,9 @@
                             <span>iPhone 16 VN/A</span>
                         </td>
                         <td>25.000.000đ</td>
-                        <td>1</td>
+                        <td><div class="quantity">
+                            <input type="number" value="1" min="1">
+                        </div></td>
                         <td>25.000.000đ</td>
                         <td>
                             <button class="delete-btn">🗑️</button>
@@ -140,6 +153,7 @@
         <hr align="center" /><br>
         <p3>Bản quyền © 2024 THT Shop.</p3>
     </footer>
+    <script src="../js/cart.js"></script>
 </body>
 
 </html>
