@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="../css/cart.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <img src="../img/thtshop-removebg-preview.png" alt="">
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="icon1">
+            <form action="" id="search-box">
+                <div class="search-container">
+                    <input type="text" id="search-text" placeholder="Bạn muốn tìm gì..." required>
+                    <button id="search-btn">
+                        <i class="fa-solid fa-magnifying-glass" style="color: #fff;"></i>
+                    </button>
+                </div>
+            </form>
+            <a href="login.html"><span class="material-symbols-outlined">person</span></a>
+            <a href=""><span class="material-symbols-outlined">favorite</span></a>
+            <a href=""><span class="material-symbols-outlined">shopping_cart</span></a>
+        </div>
+    </header>
+
+    <main>
+        <div class="cart-container">
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="product-info">
+                            <input type="checkbox" name="" id="">
+                            <img src="../img/sp01.png" alt="Asgaard sofa">
+                            <span>iPhone 16 Promax VN/A</span>
+                        </td>
+                        <td>25.000.000đ</td>
+                        <td>1</td>
+                        <td>25.000.000đ</td>
+                        <td>
+                            <button class="delete-btn">🗑️</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="product-info">
+                            <input type="checkbox" name="" id="">
+                            <img src="../img/sp02.png" alt="Asgaard sofa">
+                            <span>iPhone 16 VN/A</span>
+                        </td>
+                        <td>25.000.000đ</td>
+                        <td>1</td>
+                        <td>25.000.000đ</td>
+                        <td>
+                            <button class="delete-btn">🗑️</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="product-info">
+                            <input type="checkbox" name="" id="">
+                            <img src="../img/sp05.png" alt="Asgaard sofa">
+                            <span>iPhone 16 VN/A</span>
+                        </td>
+                        <td>25.000.000đ</td>
+                        <td>1</td>
+                        <td>25.000.000đ</td>
+                        <td>
+                            <button class="delete-btn">🗑️</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="cart-summary">
+                <h3>Cart Total</h3>
+                <div class="summary-item">
+                    <span>Subtotal</span>
+                    <span>25.000.000đ</span>
+                </div>
+                <div class="summary-item">
+                    <span>Total</span>
+                    <span class="total">25.000.000đ</span>
+                </div>
+                <button class="checkout-btn">Checkout</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <div class="container2">
+            <div class="logo">
+                <img src="../img/thtshop-removebg-preview.png" alt="Furniro">
+                <p>13 P. Trịnh Văn Bô, Xuân Phương,<br>Nam Từ Liêm, Hà Nội</p>
+            </div>
+            <div class="footer-column">
+                <h3>Sitemap</h3>
+                <a href="#">Home</a><br>
+                <a href="#">Shop</a><br>
+                <a href="#">About</a><br>
+                <a href="#">Contact</a>
+            </div>
+            <div class="footer-column">
+                <h3>Help</h3>
+                <a href="#">Payment Options</a><br>
+                <a href="#">Returns</a><br>
+                <a href="#">Privacy Policies</a>
+            </div>
+            <div class="footer-column">
+                <h3>Location</h3>
+                <p>trungpldph51651@gmail.com</p>
+                <p>hieulvph51615@gmail.com</p>
+                <p>tultph51404@gmail.com</p><br>
+            </div>
+        </div>
+        <hr align="center" /><br>
+        <p3>Bản quyền © 2024 THT Shop.</p3>
+    </footer>
+</body>
+
+</html>

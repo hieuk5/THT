@@ -3,7 +3,6 @@ session_start();
 // Require file Common
 require_once '../commons/env.php'; // Khai báo biến môi trường
 require_once '../commons/function.php'; // Hàm hỗ trợ
-
 // Require toàn bộ file Controllers
 require_once './controllers/AdminDanhMucController.php';
 require_once './controllers/AdminSanPhamController.php';
@@ -19,6 +18,10 @@ require_once './models/AdminTaikhoan.php';
 
 // Route
 $act = $_GET['act'] ?? '/';
+
+if($act !== 'login-admin' && $act !== 'check-login-admin' && $act !== 'logout-admin'){
+    checkLoginAdmin(); 
+}
 
 if (isset($_GET['status'])) {
     if ($_GET['status'] === 'success') {
@@ -105,9 +108,10 @@ match ($act) {
     'formsuakhachhang' => (new AdminTaiKhoanController())->formEditKhachHang(),
     'suakhachhang' => (new AdminTaiKhoanController())->postEditKhachHang(),
     'chitietkhachhang' => (new AdminTaiKhoanController())->detailKhachHang(),
+    default => 'Không tìm thấy trang',
     
-
-
-
-    default => 'Không tìm thấy trang'
+    // route auth
+    'login-admin' => (new AdminTaiKhoanController())->formLogin(),
+    'check-login-admin' => (new AdminTaiKhoanController())->login(),
+    'logout-admin'=> (new AdminTaiKhoanController())->logout(),
 };

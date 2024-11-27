@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh Toán</title>
+    <link rel="stylesheet" href="../css/success.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header class="hidden">
+        <img src="../img/thtshop-removebg-preview.png" alt="">
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Support</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+        </nav>
+        <div class="icon1">
+            <form action="" id="search-box">
+                <div class="search-container">
+                    <input type="text" id="search-text" placeholder="Bạn muốn tìm gì..." required>
+                    <button id="search-btn">
+                        <i class="fa-solid fa-magnifying-glass" style="color: #fff;"></i>
+                    </button>
+                </div>
+            </form>
+            <div class="dropdown-container">
+                <span class="material-symbols-outlined dropdown-icon">person</span>
+                <div class="dropdown-menu">
+                    <a href="login.html" class="dropdown-item">Đăng nhập</a>
+                    <a href="#" class="dropdown-item">Thông tin tài khoản</a>
+                    <a href="#" class="dropdown-item">Đăng xuất</a>
+                </div>
+            </div>
+            <a href=""><span class="material-symbols-outlined">favorite</span></a>
+            <a href=""><span class="material-symbols-outlined">shopping_cart</span></a>
+        </div>
+
+    </header>
+
+    <!-- Thanh toan -->
+    <div class="success-container">
+        <div class="success-box">
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-check-circle">
+                    <path d="M9 12l2 2 4-4"></path>
+                    <circle cx="12" cy="12" r="10"></circle>
+                </svg>
+            </div>
+            <h1>Thanh toán thành công!</h1>
+            <p>Cảm ơn bạn đã mua sắm với chúng tôi.</p>
+            <button id="back-home">Về trang chủ</button>
+        </div>
+    </div>
+
+
+
+    <div class="footer1 hidden">
+        <div class="icon"><img src="../img/cup.png" alt="">
+            <p1>Thương hiệu</p1><br><br>
+            <p2>Trên 2 năm tuổi</p2>
+        </div>
+        <div class="icon"><img src="../img/support_agent_75dp_000000_FILL0_wght700_GRAD200_opsz48.png" alt="">
+            <p1>Support mọi lúc 24/7</p1>
+        </div>
+        <div class="icon"><img src="../img/workspace_premium_75dp_000000_FILL0_wght700_GRAD200_opsz48.png" alt=""><br>
+            <p1>Chế độ bảo hành</p1><br><br>
+            <p2>Hấp dẫn, gần gũi</p2>
+        </div>
+        <div class="icon"><img src="../img/local_shipping_74dp_000000_FILL0_wght700_GRAD200_opsz48.png" alt="">
+            <p1>Free Ship</p1>
+            <!-- <p2>Dưới 10km </p2> -->
+        </div>
+    </div>
+    <!-- footer -->
+    <footer class="hidden">
+        <div class="container2">
+            <div class="logo">
+                <img src="../img/thtshop-removebg-preview.png" alt="Furniro">
+                <p>13 P. Trịnh Văn Bô, Xuân Phương,<br>Nam Từ Liêm, Hà Nội</p>
+            </div>
+            <div class="footer-column">
+                <h3>Sitemap</h3>
+                <a href="#">Home</a><br>
+                <a href="#">Shop</a><br>
+                <a href="#">About</a><br>
+                <a href="#">Contact</a>
+            </div>
+            <div class="footer-column">
+                <h3>Help</h3>
+                <a href="#">Payment Options</a><br>
+                <a href="#">Returns</a><br>
+                <a href="#">Privacy Policies</a>
+            </div>
+            <div class="footer-column">
+                <h3>Location</h3>
+                <p>trungpldph51651@gmail.com</p>
+                <p>hieulvph51615@gmail.com</p>
+                <p>tultph51404@gmail.com</p><br>
+            </div>
+        </div>
+        <hr align="center" /><br>
+        <p3>Bản quyền © 2024 THT Shop.</p3>
+    </footer>
+
+
+    <script>
+        document.getElementById('back-home').addEventListener('click', function () {
+            // Điều hướng về trang chủ
+            window.location.href = 'trangchu.html';
+        });
+
+    </script>
+</body>
+
+</html>

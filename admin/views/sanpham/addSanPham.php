@@ -45,7 +45,7 @@
 
                 <div class="form-group col-6">
                   <label>Giá sản phẩm</label>
-                  <input type="number" class="form-control" name="gia" placeholder="Nhập giá sản phẩm">
+                  <input type="text" class="form-control" name="gia" placeholder="Nhập giá sản phẩm">
                   <?php if (isset($_SESSION['error']['gia'])) { ?>
                     <p class="text-danger"><?= $_SESSION['error']['gia'] ?></p>
                   <?php } ?>
@@ -53,7 +53,7 @@
 
                 <div class="form-group col-6">
                   <label>Giá khuyến mãi</label>
-                  <input type="number" class="form-control" name="giam_gia" placeholder="Nhập giá khuyến mãi">
+                  <input type="text" class="form-control" name="giam_gia" placeholder="Nhập giá khuyến mãi">
                   <?php if (isset($_SESSION['error']['giam_gia'])) { ?>
                     <p class="text-danger"><?= $_SESSION['error']['giam_gia'] ?></p>
                   <?php } ?>

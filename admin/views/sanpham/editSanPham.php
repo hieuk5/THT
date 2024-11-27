@@ -54,7 +54,7 @@
 
               <div class="form-group">
                 <label for="gia">Giá sản phẩm</label>
-                <input type="number" id="gia" name="gia" class="form-control" value="<?= $sanPham['gia']; ?>"></input>
+                <input type="text" id="gia" name="gia" class="form-control" value="<?= $sanPham['gia']; ?>"></input>
                 <?php if (isset($_SESSION['error']['gia'])) { ?>
                   <p class="text-danger"><?= $_SESSION['error']['gia'] ?></p>
                 <?php } ?>
@@ -62,7 +62,7 @@
 
               <div class="form-group">
                 <label for="giam_gia">Giá khuyến mại</label>
-                <input type="number" id="giam_gia" name="giam_gia" class="form-control" value="<?= $sanPham['giam_gia']; ?>"></input>
+                <input type="text" id="giam_gia" name="giam_gia" class="form-control" value="<?= $sanPham['giam_gia']; ?>"></input>
                 <?php if (isset($_SESSION['error']['giam_gia'])) { ?>
                   <p class="text-danger"><?= $_SESSION['error']['giam_gia'] ?></p>
                 <?php } ?>

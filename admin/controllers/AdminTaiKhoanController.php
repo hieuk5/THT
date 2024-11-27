@@ -238,6 +238,44 @@ class AdminTaiKhoanController{
 
         deleteSessionError();
     }
+
+    public function formLogin(){
+        require_once './views/auth/formLogin.php';
+        deleteSessionError();
+        exit();
+    }
+
+    public function login(){
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            // lẤY email và pass gửi lên từ form
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+            // var_dump($password);die;
+            // xử lý kiểm tra thông tin đăng nhập
+            $user = $this->modelTaiKhoan->checkLogin($email,$password);
+
+            if($user == $email){     
+                // trường hợp đăng nhập thành công
+                // lưu thông tin cào session
+                $_SESSION['user_admin'] = $user;
+                header("Location: " . BASE_URL_ADMIN);
+                exit();
+            }else{
+                // neu loi thi luu loi vao session
+                $_SESSION['error'] = $user;
+                // var_dump($_SESSION['error']);die;
+                $_SESSION['flash'] = true;
+                header("Location: " . BASE_URL_ADMIN . '?act=login-admin');
+                exit(); 
+            }
+        }
+    }
+    public function logout(){
+        if (isset($_SESSION['user_admin'])){
+            unset($_SESSION['user_admin']);
+            header("location: ". BASE_URL_ADMIN . '?act=login-admin');
+        }
+    }
 }
 
 ?>
