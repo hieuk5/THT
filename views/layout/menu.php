@@ -30,7 +30,7 @@
                 <?php if (!isset($_SESSION['user_client'])) { ?>
                     <a href="<?= BASE_URL . '?act=login' ?>" class="dropdown-item">Đăng nhập</a>
                 <?php } else { ?>
-                    <a href="" class="dropdown-item">Thông tin cá nhân</a>
+                    <a href="<?= BASE_URL . '?act=chi-tiet-tai-khoan' ?>" class="dropdown-item">Thông tin cá nhân</a>
                     <a href="<?= BASE_URL . '?act=lich-su-mua-hang' ?>" class="dropdown-item">Lịch sử mua hàng</a>
                     <a href="<?= BASE_URL . '?act=logout' ?>" class="dropdown-item" onclick="return confirm('Bạn có chắc chắn muốn đăng xuất chứ?');">Đăng xuất</a>
                 <?php } ?>

@@ -1,5 +1,4 @@
 <?php 
-
 class AdminDonHangController {
     public $modelDonHang;
     
@@ -43,6 +42,7 @@ class AdminDonHangController {
             require_once './views/donhang/editDonHang.php';
             deleteSessionError();
         }else{
+            $_SESSION['error_message'] = "Đơn hàng không tồn tại";
             header("Location: " . BASE_URL_ADMIN . "?act=donhang");
             exit();
         }

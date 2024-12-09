@@ -321,6 +321,10 @@ class HomeController
             //var_dump($phuongThucThanhToan);die();
             //lấy danh sách tất cả đơn hàng của tài khoản
             $donHangs = $this->modelDonHang->getDonHangFromUser($tai_khoan_id);
+            //sắp xếp đơn hàng
+            usort($donHangs, function($a, $b){
+                return strtotime($b['ngay_dat']) - strtotime($a['ngay_dat']);
+            });
             require_once "./views/lichSuMuaHang.php";
         }else{
             var_dump("Bạn chưa đăng nhập");
@@ -448,4 +452,13 @@ class HomeController
     //     //var_dump($listProduct);
     //     require_once './views/listProduct.php';
     // }
+    public function chitiettaikhoan(){
+        if ($_SESSION['user_client']) {
+            $user = $this->modelTaiKhoan->getTaiKhoanFromEmail($_SESSION['user_client']);
+            require_once './views/TaiKhoan.php';
+        } else {
+            var_dump('chưa đăng nhập');
+            die();
+        }
+    }
 }
