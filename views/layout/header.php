@@ -8,7 +8,7 @@
 
     
     <link rel="stylesheet" href="./LayoutClient/css/trangchu.css">
-    <link rel="stylesheet" href="./LayoutClient/css/details.css">
+    <!-- <link rel="stylesheet" href="./LayoutClient/css/details.css"> -->
     
     
     <!-- Slick slider css -->

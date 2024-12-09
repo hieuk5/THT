@@ -3,7 +3,7 @@
 <body>
 
     <?php require_once 'views/layout/menu.php' ?>
-    <div class="banner">
+    <div class="banner hidden">
         <div class="slider" id="slider">
             <div class="slide active">
                 <img src="./LayoutClient/img/slider_1.png" alt="Slide 1">
@@ -35,13 +35,13 @@
     <div class="container">
         <h2>Sản Phẩm Mới</h2>
         <button class="btn2">
-            <h4>View all</h4>
+            View all
         </button>
         <div class="product-container">
             <button class="prev-btn">❮</button>
-            <div class="product-wrapper hidden">
+            <div class="product-wrapper">
                 <?php foreach ($listSanPham as $key => $sanPham): ?>
-                    <div class="pro-item">
+                    <div class="pro-item hidden">
                         <a href="<?= BASE_URL . '?act=chi-tiet-san-pham&id_sanpham=' . $sanPham['id']; ?>">
                             <img src="<?= BASE_URL . $sanPham['hinh'] ?>" alt="">
                         </a>
@@ -88,7 +88,7 @@
     <div class="container">
         <h2>Sản Phẩm Hot</h2>
         <button class="btn2">
-            <h4>View all</h4>
+            View all
         </button>
         <div class="product-container-hot">
             <button class="prev-btn-hot">❮</button>
@@ -99,9 +99,9 @@
                             <img src="<?= BASE_URL . $sanPham['hinh'] ?>" alt="">
                         </a>
 
-                        <div class="ten"><?= $sanPham['ten_sp'] ?></div>
-                        <div class="gia"><?= formatNumber($sanPham['gia']) ?> đ</div>
+                        <div class="ten"><?= $sanPham['ten_sp'] ?></div>                  
                         <div class="giamgia"><?= formatNumber($sanPham['giam_gia']) ?> đ</div>
+                        <div class="gia"><?= formatNumber($sanPham['gia']) ?> đ</div>
 
                         <button class="btn1" onclick="location.href='<?= BASE_URL . '?act=chi-tiet-san-pham&id_sanpham=' . $sanPham['id']; ?>'">
                             Xem chi tiết
@@ -113,14 +113,14 @@
         </div>
     </div>
    
-    <div class="banner">
+    <div class="banner hidden">
         <img src="./LayoutClient/img/section_banner.webp" alt="">
     </div>
     <div class="container">
 
         <h2>Tin tức</h2>
         <button class="btn2">
-            <h4>View all</h4>
+            View all
         </button>
         <div class="product2 hidden">
             <div class="pro-item">

@@ -6,7 +6,7 @@
         <div class="icon"><img src="./LayoutClient/img/support_agent_75dp_000000_FILL0_wght700_GRAD200_opsz48.png" alt="">
             <p1>Support mọi lúc 24/7</p1>
         </div>
-        <div class="icon"><img src="./LayoutClient/img/footer1.jpg" alt=""><br>
+        <div class="icon"><img src="./LayoutClient/img/footer1.png" alt=""><br>
             <p1>Chế độ bảo hành</p1><br><br>
             <p2>Hấp dẫn, gần gũi</p2>
         </div>

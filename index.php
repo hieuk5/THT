@@ -56,4 +56,6 @@ match ($act) {
     // signup
     'form-signup' => (new HomeController())->formSignup(),
     'check-signup' => (new HomeController())->postSignup(),
+    // tài khoản khách hàng
+    'chi-tiet-tai-khoan' =>(new HomeController())->chitiettaikhoan()
 };

@@ -105,11 +105,6 @@ header img{
     color: orange;
 }
 /* banner */
-.banner img{
-    width: 100%;
-    max-height: 500px; /* Giới hạn chiều cao tối đa */
-    object-fit: cover; /* Giữ tỷ lệ ảnh và điều chỉnh phù hợp với khung */
-}
 .banner {
     position: relative;
     overflow: hidden;
@@ -206,7 +201,10 @@ button.next {
 button.prev:hover, button.next:hover {
     background-color: orange;
     transition: all 1s;
+
 }
+
+
 /* menu */
 nav ul {
     display:flex;
@@ -237,121 +235,66 @@ nav ul li a:hover{
 }
 
 
-/* contact */
-.contact-page {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+/* main */
+.btn2{
+    float: right;
+    margin: -40px 30px;
+    border: 1px solid orange;
+    color: orange;
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: #fff;
 }
-
-/* Phần trên: Thông tin liên hệ */
-.contact-info-section {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.info-box {
-    flex: 1;
-    padding: 0 15px;
-}
-
-.info-box h3 {
-    margin-bottom: 10px;
-    color: #333;
-    font-size: 18px;
-}
-
-.social-icons a {
-    margin-right: 10px;
-}
-.social-icons i {
-    font-size: 25px; /* Thay đổi kích thước icon */
-    color: #333;
-    margin-right: 15px;
-    transition: color 0.3s;
-}
-
-.social-icons i:hover {
-    color: #f8a400;
-}
-
-/* Phần dưới: Nội dung (ảnh và form) */
-.contact-content {
-    display: flex;
-    gap: 20px;
-}
-
-.image-container {
-    flex: 1;
-    max-width: 50%;
-}
-
-.image-container img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    height: 100%;
-}
-
-.form-container {
-    flex: 1;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.form-container h3,
-.form-container h2 {
-    margin-bottom: 10px;
-    color: #333;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-group {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 15px;
-}
-
-input, textarea {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #f8a400;
+.btn2:hover{
+    background-color: orange;
     color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    animation: 2ms;
+}
+.btn3 img{
+    width: 10px;
+}
+.product{
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap:15px;
+    /* margin: 25px; */
+    padding: 10px;
+}
+/* .product2 img{
+    width: 405px;
+    height: 296px;
+    
+} */
+.footer1{
+    height: 186px;
+    background-color: #fff7ed;
+    display: flex;
+    align-items: center;
+    grid-gap: 180px;
+    justify-content: center;
+    font-weight: bold;
+    line-height: 10px;
+}
+p{
+    float: right;
+    margin-left: -80px;
+}
+.icon img{
+    width: 50px;
+    display: flex;
+    align-items: center;
+    padding-bottom:10px ;
+    
 }
 
-button:hover {
-    background-color: #e59000;
-}
-
-/* footer */
 footer {
     background-color: #333;
     color: #fff;
+    padding: auto;
     text-align: center;
     padding: 30px 90px;
-    /* height: 100%; */
-    padding-bottom: 0;
-    margin-bottom: 0;
   }
   
   .container2 {
@@ -359,9 +302,12 @@ footer {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    height: 300px;
+  
   }
   .footer-column {
     flex: 1;
+    /* max-width: 200px; */
     margin: 0 80px;
 }
 .logo{
@@ -371,7 +317,9 @@ footer {
 }
 .logo img{
     width: 20%;
+    /* margin-left: 30px; */
     display: flex;
+    /* justify-content: space-between; */
 }
 .logo p {
     margin-left: 5px;
@@ -395,6 +343,16 @@ footer {
     color: #fff;
 }
 
+p3{
+    margin-bottom: -15px 0;
+    text-align: center;
+}
+
+/* hr{
+    border-bottom: 1px solid #444;
+    margin: 20px 0;
+} */
+
 /* Copyright Section */
 .footer-bottom {
     text-align: center;
@@ -403,3 +361,104 @@ footer {
     font-size: 12px;
     border-top: 1px solid #444;
 }
+.noidung{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 10px;
+    height: 500px;
+    padding: 0 0 20px 20px;
+    width: 1440px;
+    margin: auto;
+}
+.sizebar{
+    width: 100%;
+    height: 480px;
+    margin: auto;
+    border: 1px rgb(255, 199, 30) solid;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 10px 0 0;
+    
+}
+
+.nd{
+    padding-top: 50px;
+}
+.nd a{
+    display: block;
+    text-decoration: none;
+    /* border-bottom: 1px rgb(149, 134, 134) solid; */
+    height: 50px;
+    margin-top: 20px;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: black;
+    transition: transform 0.5s, font-size 0.5s;
+    /* border: 2px solid transparent; */
+    /* position: relative; */
+    text-align: center;
+}
+.sizebar a:hover{
+    color: orange;
+    font-size: 21px;
+    transform: scale(1.1);
+}
+.btn{
+    width: 100%; height: 50px; margin-top: 10px; background-color: rgb(255, 166, 0);border: 1px white solid; border-radius: 10px; font-size: 20px; 
+}
+.btn:hover{
+    background-color: rgb(255, 66, 66);
+}
+.conten{
+    width: 100%;
+    height: 480px;
+    margin: auto;
+    border: 1px rgb(255, 199, 30) solid;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 10px 0 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 5px;
+}
+.img{
+
+    margin: auto;
+}
+.img img{
+    width: 300px;
+    height: 320px;
+    /* margin: 65px 0 0 23px ; */
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px   rgb(255, 179, 121);
+
+}
+.ttcanhan{
+    display: block;
+    height: 50px;
+    margin-top: 20px;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+table{
+    width: 100%;
+    height: 300px;
+    border-collapse:collapse;
+    border-radius: 2px;
+    overflow: hidden;
+    margin-top: 60px;
+    
+    
+}
+th, td{
+    border: 1px rgb(255, 255, 255) solid;
+    
+}
+td{
+    padding-left: 20px;
+}
+/* .ho a:hover{
+    color: red;
+} */

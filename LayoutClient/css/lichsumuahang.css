@@ -1,0 +1,78 @@
+main {
+    padding: 20px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+}
+
+.cart-container {
+    max-width: 100%;
+    overflow-x: auto;
+    margin: 0 auto !important;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cart-table th,
+.cart-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-table th {
+    background-color: orange;
+    color: white;
+}
+
+/* Row styles */
+.cart-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.cart-table tbody tr:hover {
+    background-color: #e9e9e9;
+}
+
+/* Button styles */
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 0 4px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+.cart-table .btn {
+    margin-top: 5px;
+}
+
+.cart-container {
+    margin-top: 20px;
+}

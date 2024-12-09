@@ -74,6 +74,16 @@
                 </div>
                 <ul class="promotion-details">
                     <?= $sanPham['mo_ta'] ?>
+                    <div class="color-selection">
+                    <div class="capacity-main">
+                        <label for="capacity">Dung Lượng:</label>
+                        <div class="capacity-options">
+                            <button class="capacity" data-value="128GB">128GB</button>
+                            <button class="capacity" data-value="256GB">256GB</button>
+                            <button class="capacity" data-value="512GB">512GB</button>
+                        </div>
+                    </div>
+                </div>
                     <form action="<?= BASE_URL . '?act=them-gio-hang' ?>" method="post">
                         <div class="quantity-main">
                             <input type="hidden" name="san_pham_id" value="<?= $sanPham['id']; ?>">
@@ -83,19 +93,18 @@
                             </div>
                         </div>
 
-                        <div id="total-price" data-price="<?= $sanPham['gia']; ?>">
-                            <?= formatNumber($sanPham['gia']) ?> đ
-                        </div>
+                        
 
                         <div id="error-message" style="color: red; display: none;"></div>
                         <hr align="center">
 
-
                         <div class="price">
                             <div class="giamgia" id="discount-price"><?= formatNumber($sanPham['giam_gia']) ?> đ</div>
-                            <div class="gia" id="original-price"><?= formatNumber($sanPham['gia']) ?> đ</div>
-
+                            <div id="total-price" data-price="<?= $sanPham['gia']; ?>">
+                            <?= formatNumber($sanPham['gia']) ?> đ
                         </div>
+                        </div>
+
                         <div class="purchase-buttons">
                             <div class="buy-now">
                                 <button class="buy-now">
@@ -111,20 +120,7 @@
                     <!-- Add other list items here -->
                 </ul>
 
-                <div class="color-selection">
-
-                    <div class="capacity-main">
-                        <label for="capacity">Dung Lượng:</label>
-                        <div class="capacity-options">
-                            <button class="capacity" data-value="128GB">128GB</button>
-                            <button class="capacity" data-value="256GB">256GB</button>
-                            <button class="capacity" data-value="512GB">512GB</button>
-                        </div>
-                    </div>
-
-
-
-                </div>
+                
 
 
 
@@ -164,29 +160,29 @@
                             <?php endforeach; ?>
 
                             <?php
-                            if(isset($_SESSION['user_client'])){
+                            if (isset($_SESSION['user_client'])) {
                                 $tai_khoan_id = $_SESSION['user_client'];
-                            
+
                             ?>
 
-                            <form action="<?= BASE_URL . '?act=binh-luan&id_sanpham=' . $sanPham['id'] ?>" method="post" class="review-form">
-                                <input type="hidden" name="san_pham_id" value="<?= $sanPham['id']; ?>">
-                                <input type="hidden" name="tai_khoan_id" value="<?= $tai_khoan_id; ?>">
+                                <form action="<?= BASE_URL . '?act=binh-luan&id_sanpham=' . $sanPham['id'] ?>" method="post" class="review-form">
+                                    <input type="hidden" name="san_pham_id" value="<?= $sanPham['id']; ?>">
+                                    <input type="hidden" name="tai_khoan_id" value="<?= $tai_khoan_id; ?>">
 
-                                <div class="form-group row">
-                                    <div class="col">
-                                        <label class="col-form-label"><span class="text-danger">*</span>
-                                            Nội dung Bình luận</label>
-                                        <textarea class="form-control" required placeholder="Nhập nội dung bình luận sản phẩm" name="noi_dung"></textarea>
+                                    <div class="form-group row">
+                                        <div class="col">
+                                            <label class="col-form-label"><span class="text-danger">*</span>
+                                                Nội dung Bình luận</label>
+                                            <textarea class="form-control" required placeholder="Nhập nội dung bình luận sản phẩm" name="noi_dung"></textarea>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="buttons">
-                                    <button class="btn btn-sqr" type="submit">Bình luận</button>
-                                </div>
-                            </form>
+                                    <div class="buttons">
+                                        <button class="btn btn-sqr" type="submit">Bình luận</button>
+                                    </div>
+                                </form>
 
-                            <?php 
-                            }else{
+                            <?php
+                            } else {
                                 echo '<p class="alert alert-warning">Bạn cần đăng nhập thì mới có thể bình luận. <a href="' . BASE_URL . '?act=login">Đăng nhập tại đây</a></p>';
                             }
                             ?>
@@ -247,7 +243,7 @@
     <script src="./LayoutClient/js/trangchu.js"></script>
     <script src="./LayoutClient/js/details.js"></script>
 
-    <?php require_once 'views/layout/footer.php' ?>    
+    <?php require_once 'views/layout/footer.php' ?>
 </body>
 
 </html>

@@ -1,5 +1,4 @@
 <?php 
-
 class AdminDonHangController {
     public $modelDonHang;
     
@@ -9,6 +8,11 @@ class AdminDonHangController {
     }
     public function danhSachDonHang() {
         $listDonHang = $this->modelDonHang->getAllDonHang();
+
+        //sắp xếp đơn hàng theo ngày đặt
+        usort($listDonHang, function($a, $b){
+            return strtotime($b['ngay_dat']) - strtotime($a['ngay_dat']);
+        });
         require_once './views/donhang/listDonHang.php';
     }
 
@@ -38,6 +42,7 @@ class AdminDonHangController {
             require_once './views/donhang/editDonHang.php';
             deleteSessionError();
         }else{
+            $_SESSION['error_message'] = "Đơn hàng không tồn tại";
             header("Location: " . BASE_URL_ADMIN . "?act=donhang");
             exit();
         }
