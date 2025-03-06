@@ -106,7 +106,6 @@ class AdminSanPhamController {
                 header("Location: " . BASE_URL_ADMIN . "?act=formthemsanpham");
                 exit();
             }
-            
         }
     }
 
