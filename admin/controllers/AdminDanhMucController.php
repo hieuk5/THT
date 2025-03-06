@@ -35,7 +35,6 @@ class AdminDanhMucController {
                 $this->modelDanhMuc->insertDanhMuc($ten_loai, $mota);
                 header("Location: " . BASE_URL_ADMIN . "?act=danhmuc&status=add_success");
                 exit();
-
             }else{
                 //trả về form và lỗi
                 require_once './views/danhmuc/addDanhMuc.php';
